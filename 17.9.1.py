@@ -38,8 +38,8 @@ while True:
     int_list = input('Введите последовательность чисел, разделенных пробелами: ')
     try:
         if not int_list:
-            raise ValueError
-        int_list = list(map(int, int_list.split()))
+            raise ValueError                         # если список пуст - вызываем исключение
+        int_list = list(map(int, int_list.split()))  # делим строку, преобразуем в список чисел
         break
     except:
         print('Необходимо ввести числа!')
